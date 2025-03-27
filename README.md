@@ -12,7 +12,7 @@ RESTful 웹 서비스를 만들기 위해 사용하는 클래스에 붙이는 �
 
 ## @RequestMapping
 Spring 애들한테 "야 이 URL 들어오면 이 메서드 실행시켜라" 이렇게 명령하는 주석.
-그냥 가만히 있으면 Controller가 널 알아봐주냐? 아니지. 그러니까 "요청 오면 이리와" 하고 손짓하는게 @RequestMapping임.
+그냥 가만히 있다고 Controller가 알아주는게 아님. url 요청 오면 해당 url의 메서드가 이리와~ 하고 손짓하는게 @RequestMapping임.
 
 ⬇️ MyRestController.java ⬇️
 
