@@ -37,8 +37,7 @@ public class MyRestController {
 
 ## @PathVariable vs @RequestParam
 
-
-자, 이 두 개의 용도가 각각 어떻게 다른지 알아봐야겠.지?
+늬들은 또 뭔데~~
 
 
 - PathVariable
