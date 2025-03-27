@@ -1,5 +1,7 @@
 # 컨트롤러라고? 너 누군데 ;;
 
+~~이 글을 읽기 전, MVC 패턴에 대한 이해 먼저 하고 오길~~
+
 ## @RestController
 
 ~~@RestController는 Spring Framework에서 제공하는 어노테이션으로,
