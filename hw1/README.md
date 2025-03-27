@@ -11,7 +11,13 @@ RESTful 웹 서비스를 만들기 위해 사용하는 클래스에 붙이는 �
 
 음 사실 **@Controller**라는 칭긔도 있긴 한데, 프론트에 더 적합한 칑긔라고 알고 있음.
 
-이 칭긔 같은 경우엔 @RestController와 다르게 return값이 html이다.
+이 칭긔 같은 경우엔 @RestController와 다르게 return값이 html 파일명이다.
+
+다시 말해 같은 return "hello" 코드여도, 해당 클래스를
+
+@Controller가 감싸고 있으면 "hello.html"파일을 return하고,
+
+@RestController가 감싸고 있으면 "hello" 문자열을 return함.
 
 걍 이것만 알아도 
 음~ html은 프론트에서 주로 다루므로 나 김서버는 @Controller보단 정말 'real값'?들을 다루는 @RestController를 더 자주 쓰겠군~ 이라고 생각해 그냥
