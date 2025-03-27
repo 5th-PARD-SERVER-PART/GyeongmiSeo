@@ -15,10 +15,10 @@ Spring 애들한테 "야 이 URL 들어오면 이 메서드 실행시켜라" 이
 그냥 가만히 있으면 Controller가 널 알아봐주냐? 아니지. 그러니까 "요청 오면 이리와" 하고 손짓하는게 @RequestMapping임.
 
 ⬇️ MyRestController.java ⬇️
-'''java
+
+```java
 @RestController
 public class MyRestController {
-
     @RequestMapping("")
     public String hello(){
         return "안뇽 ~";
@@ -31,7 +31,7 @@ public class MyRestController {
         }
         return "유저 ID : "+id+", TMI : "+TMI;
     }
-
 }
+```
 
 ## @PathVariable vs @RequestParam
