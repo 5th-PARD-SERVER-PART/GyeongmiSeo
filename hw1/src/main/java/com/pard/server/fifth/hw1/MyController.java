@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MyController {
     @RequestMapping("")
     public String hello(){
-        return "안뇽 ~";
+        return "안뇽띠 ~";
     }
     @RequestMapping("/gm/{id}")
     public String ID_and_TMI(@PathVariable String id,
