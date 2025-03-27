@@ -23,7 +23,9 @@ RESTful 웹 서비스를 만들기 위해 사용하는 클래스에 붙이는 �
 ---
 
 걍 이것만 알아도 
-음~ html은 프론트에서 주로 다루므로 나 김서버는 @Controller보단 정말 'real값'?들을 다루는 @RestController를 더 자주 쓰겠군~ 이라고 생각해 그냥
+음~ html은 프론트에서 주로 다루므로 나 김서버는 오늘부로 @Controller에 대한 지지를 철회하고
+
+리얼 값?들을 다루는 @RestController를 더 자주 쓰겠군~ 이라고 생각해 그냥
 
 
 ## @RequestMapping (요청 짝지어주기? 막이러시고)
