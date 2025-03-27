@@ -47,4 +47,10 @@ public class MyRestController {
     }
 ```
 
+URL : [http://localhost:8080/path1/뭉치](http://localhost:8080/path1/뭉치)
+
+결과 화면
+<img width="248" alt="스크린샷 2025-03-28 오전 4 30 07" src="https://github.com/user-attachments/assets/f38b4bf6-c883-4ae0-951b-e49450cae094" />
+
+
 - RequestParam
