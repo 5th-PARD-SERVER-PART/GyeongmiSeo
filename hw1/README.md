@@ -40,7 +40,7 @@ public class MyRestController {
 늬들은 또 뭔데~~
 
 
-- PathVariable
+- 🩷 PathVariable 🩷
 
   ***URL 경로 자체에 포함된 값***
   
@@ -63,7 +63,7 @@ public class MyRestController {
     
 
 
-- RequestParam
+- 🩵 RequestParam 🩵
 
   ***URL 뒤에 붙는 ?name=형식***
   
