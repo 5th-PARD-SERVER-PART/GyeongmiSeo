@@ -44,33 +44,53 @@ public class MyRestController {
 - PathVariable
 
   ***URL 경로 자체에 포함된 값***
+  
   -> "고유한 리소스"를 가리키는 값(고유 ID, 사용자명, 글 번호 등등..에 사용)
   
-```java
-@RequestMapping("/path1/{name}")
-    public String path_1(@PathVariable("name") String name) {
-        return "---> " + name + " <--- path page";
+    ```java
+    @RequestMapping("/path2/{name}/{age}")
+    public String path_2(@PathVariable("name") String name, @PathVariable("age") Integer age) {
+        return "내 이름 " + name + ", 올해로 " + age + "살 입학했다.";
     }
-```
+    ```
+    
+    URL : [http://localhost:8080/path2/뭉치/1](http://localhost:8080/path2/뭉치/1)
+  
+     결과 화면 ⤵️
+  
+     <img width="648" alt="스크린샷 2025-03-28 오전 4 50 25" src="https://github.com/user-attachments/assets/cbd0017d-8fb4-46b5-b67d-08bc9e6e66e2" />
 
-URL : [http://localhost:8080/path1/뭉치](http://localhost:8080/path1/뭉치)
 
-결과 화면 ⤵️
-
-<img width="248" alt="스크린샷 2025-03-28 오전 4 30 07" src="https://github.com/user-attachments/assets/f38b4bf6-c883-4ae0-951b-e49450cae094" />
-
+    
 
 
 - RequestParam
 
   ***URL 뒤에 붙는 ?name=형식***
+  
   -> 부가적인 조건이나 옵션(검색, 정렬, 필터, 옵션 등등..에 사용)
 
+    ```java
+    @RequestMapping("/path2/{name}/{age}")
+    public String path_2(@PathVariable("name") String name, @PathVariable("age") Integer age) {
+        return "내 이름 " + name + ", 올해로 " + age + "살 입학했다.";
+    }
+    ```
 
-    ### 비유하자면?
-    치코파닭에서 주문한다고 치면 : 
+    URL : [http://localhost:8080/param?name=뭉치&age=1](http://localhost:8080/param?name=뭉치&age=1)
+
+    결과 화면 ⤵️
+
+    <img width="570" alt="스크린샷 2025-03-28 오전 4 54 09" src="https://github.com/user-attachments/assets/9b2bb4d2-921b-46f1-b7e9-142dd11d7659" />
+
+
     
-    - @PathVariable : "치킨 두 마리 주세요" -> 리소스를 정확히 지정
-    - @RequestParam : "근데 맛은 치즈 머스타드, 마늘꿀로 주시고, 치즈떡 좀 많이 주세요" -> 부가적인 조건 추가
+### 비유하자면?
+
+치코파닭에서 주문 📞 : 
+    
+  - @PathVariable : "치킨 두 마리 주세요" -> 리소스를 정확히 지정
+    
+  - @RequestParam : "근데 맛은 치즈 머스타드와 마늘꿀로 주시고, 치즈떡 좀 많이 주세요" -> 부가적인 조건 추가
       
   
