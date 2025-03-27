@@ -3,7 +3,7 @@ package com.pard.server.fifth.hw1;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class MyController {
+public class MyRestController {
 
     @RequestMapping("")
     public String hello(){
