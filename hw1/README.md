@@ -23,7 +23,7 @@ RESTful 웹 서비스를 만들기 위해 사용하는 클래스에 붙이는 �
 음~ html은 프론트에서 주로 다루므로 나 김서버는 @Controller보단 정말 'real값'?들을 다루는 @RestController를 더 자주 쓰겠군~ 이라고 생각해 그냥
 
 
-## @RequestMapping
+## @RequestMapping (요청 짝지어주기? 막이러시고)
 Spring 애들한테 "야 이 URL 들어오면 이 메서드 실행시켜라" 이렇게 명령하는 주석.
 ![스크린샷 2025-03-28 오전 2 57 00](https://github.com/user-attachments/assets/d0c0a8f9-f6f6-4025-96ea-a4d482fdc050)
 
