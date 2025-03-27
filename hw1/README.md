@@ -89,9 +89,9 @@ public class MyRestController {
   -> 부가적인 조건이나 옵션(검색, 정렬, 필터, 옵션 등등..에 사용)
 
     ```java
-    @RequestMapping("/path2/{name}/{age}")
-    public String path_2(@PathVariable("name") String name, @PathVariable("age") Integer age) {
-        return "내 이름 " + name + ", 올해로 " + age + "살 입학했다.";
+    @RequestMapping("/param")
+    public String param1(@RequestParam("name") String name, @RequestParam("age") Integer age){
+        return "< " + name + "(" + age + ")" + " >" + " '파람 받고 따블로 가' ";
     }
     ```
 
