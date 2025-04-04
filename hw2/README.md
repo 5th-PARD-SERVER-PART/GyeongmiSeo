@@ -1,6 +1,7 @@
 # DTO...너 뭐 돼?
 
 ---
+~해당 README.md에선 코드 해석 위주보단 전체적인 흐름을 간략하게 요약함~
 
 <img width="500" alt="스크린샷 2025-04-04 오후 10 46 53" src="https://github.com/user-attachments/assets/e05ebda1-e753-4651-86da-42e56add7f64"/>
 
