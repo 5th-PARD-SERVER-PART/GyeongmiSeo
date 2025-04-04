@@ -25,7 +25,7 @@ Controller는 맨 앞, 전방에서 URL 요청을 받는다.
    
 정말 Service라는 명성에 맞게 로직을 처리하는데에 도움을 주는 역할을 한다.
 
-뿐만 아니라 실제 Controller가 시킨 일을 하기 위해 Repository라는 entity에 직접 접근가능한 친구를 호출해서 DTO(entity 복제본) 형태로 값을 주고 받게 됨.
+뿐만 아니라 실제 Controller가 시킨 일을 하기 위해 Repository라는 entity에 직접 접근가능한 친구를 호출해서 DTO(entity절대지켜이슈로 만들어진 entity복제 장바구니) 형태로 값을 주고 받게 됨.
 
 Repository는 List, Map 형식으로 실제 프로그램에서 쓰이는 Entity값을 관리하고 있음
 
