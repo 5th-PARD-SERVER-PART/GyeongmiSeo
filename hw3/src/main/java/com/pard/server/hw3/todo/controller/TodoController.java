@@ -31,7 +31,7 @@ public class TodoController {
         return todoService.findById(taskId);
     }
 
-    @GetMapping("/findType/{type}") // 어떤 종류인지를 받아서 해당 종류의 투두를 모두 반환
+    @GetMapping("/findType") // 어떤 종류인지를 받아서 해당 종류의 투두를 모두 반환
     public ResponseEntity<List<TodoDto>> findBytype(@RequestParam String type) {
         List<TodoDto> responseValue = todoService.getTodoDtos(type);
         return new ResponseEntity<>(responseValue, HttpStatus.OK);
