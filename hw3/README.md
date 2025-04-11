@@ -156,7 +156,7 @@ JPA는 트랜잭션 안에서 엔티티의 필드가 바뀐 걸 감지하고,
 
 이거까지 Spring이 해준다니..
 
-<img width="400" alt="스크린샷 2025-04-12 오전 2 14 28" src="https://github.com/user-attachments/assets/b3a4ea90-684d-4c9e-890f-812d1473b068" />
+<img width="200" alt="스크린샷 2025-04-12 오전 2 14 28" src="https://github.com/user-attachments/assets/b3a4ea90-684d-4c9e-890f-812d1473b068" />
 
 
 
