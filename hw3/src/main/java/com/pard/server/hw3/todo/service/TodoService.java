@@ -7,6 +7,7 @@ import com.pard.server.hw3.todo.entity.Todo;
 import com.pard.server.hw3.todo.repository.TodoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -60,6 +61,7 @@ public class TodoService {
         return todoDtos;
     }
 
+    @Transactional
     public void updateById(Long taskId, UpdateTodoDto updateTodoDto){
         Todo todo = todoRepository.findById(taskId).orElseThrow(() -> new RuntimeException("해당 ID의 할 일이 존재하지 않습니다."));;
         todo.updateTitle(updateTodoDto.getTitle());
