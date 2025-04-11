@@ -146,7 +146,7 @@ ResponseEntity<List<TodoDto>>로 return하면, 센스있게 일하는 야물딱�
 JPA는 트랜잭션 안에서 엔티티의 필드가 바뀐 걸 감지하고,
 트랜잭션이 끝날 때 자동으로 UPDATE SQL을 날린다.
 
-#  @Id, @GeneratedValue, @Column
+#  @Column, @Id, @GeneratedValue
 
 프로젝트 시작할 때 나는 DB 먼저 연결해야겠다 생각했다. 세미나 때 비번 잠깐 잊어먹음 이슈로 어떻게 DB를 연결했었는지 기억을 소실한 것이다.
 
@@ -158,5 +158,26 @@ JPA는 트랜잭션 안에서 엔티티의 필드가 바뀐 걸 감지하고,
 
 <img width="200" alt="스크린샷 2025-04-12 오전 2 14 28" src="https://github.com/user-attachments/assets/b3a4ea90-684d-4c9e-890f-812d1473b068" />
 
+@Id는 이 필드가 테이블의 '기본 키'다!!!라고 박제하는 것인데,
+JPA에서 이 엔티티의 기본 키(id)를 어떻게 자동 생성할지 정하는 설정 어노테이션이 바로 @GeneratedValue이다.
+
+<img width="450" alt="스크린샷 2025-04-12 오전 2 26 18" src="https://github.com/user-attachments/assets/5f3f7238-5c36-4211-b3c0-8af12142c68d" />
+
+taskId에 @Id를 달아줬고, Id 생성방식은 GenerationType.IDENTITY로 한다.
+
+GenerationType.IDENTITY는, DB에서 자동 증가하는 숫자 (auto_increment)처럼, 이 id 필드 값을 내가 안 넣어도 DB가 알아서 넣어주게 한다.
+
+
+
+코드 왠지 보기가 싫고 시작하기도 귀찮고 오늘 할 수 있으면 내일도 할 수 있다 마인드로 미루고미루고미루고미루고또미루고미뤄서 여기까지 왔지만 생각보다 수월하게 DB도 연결되고 자잘한 오류도 어렵지 않게 해결되어서 생각보다 재밌게 과제를 했다.
+
+근데 중간에 git push -force였나 강제 덮어쓰기를 했는데 이거 때문인지 쓰던 리드미가 다 날라가고 히스토리에도 안 남아서 진심..
+
+<img width="350" alt="스크린샷 2025-04-12 오전 2 33 58" src="https://github.com/user-attachments/assets/aa44d8e3-b57e-490b-9810-af8ff03c7fc5" />
+
+다시 쓰기 짱 귀찮았는데 쓰다보니 좀 뿌듯하지만 걍 솔직히 졸리고 빨리 자고 싶다. 자고 일어나면 세미나를 가야 한다.
+
+
+..일단 자.
 
 
