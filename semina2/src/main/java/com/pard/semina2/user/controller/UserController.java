@@ -2,12 +2,10 @@ package com.pard.semina2.user.controller;
 
 
 import com.pard.semina2.user.dto.UserDto;
-import com.pard.semina2.user.entity.User;
 import com.pard.semina2.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
 
 @RestController

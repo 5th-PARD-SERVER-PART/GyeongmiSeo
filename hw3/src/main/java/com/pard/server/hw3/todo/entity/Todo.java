@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Todo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = )
     private Long taskId;
 
     @Column(name = "title", length = 100)
