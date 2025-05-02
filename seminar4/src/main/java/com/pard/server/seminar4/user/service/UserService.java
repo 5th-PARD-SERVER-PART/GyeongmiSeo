@@ -1,6 +1,5 @@
 package com.pard.server.seminar4.user.service;
 
-import com.pard.server.seminar4.user.dto.UserRequest;
 import com.pard.server.seminar4.user.dto.UserResponse;
 import com.pard.server.seminar4.user.entity.User;
 import com.pard.server.seminar4.user.repository.UserRepository;
@@ -15,14 +14,15 @@ import java.util.Optional;
 public class UserService {
     private final UserRepository userRepo;
 
-    public UserResponse.ReadUser readUser(Long id ) {
+    // user를 찾아서 dto 형식으로 반환
+    public UserResponse.ReadUser readUser(Long id) {
         Optional<User> u = userRepo.findById(id);
         User user = u.get();
         UserResponse.ReadUser ret = UserResponse.ReadUser.from(user);
         return ret;
     }
 
-    public void createUser(UserRequest.UserCreateRequest req) {
+    public void createUser(UserResponse.UserRequest.UserCreateRequest req) {
         User u = new User(null, req.getName(), req.getBook(), null);
         userRepo.save(u);
     }

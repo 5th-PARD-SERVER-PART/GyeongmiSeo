@@ -1,6 +1,5 @@
 package com.pard.server.seminar4.user.controller;
 
-import com.pard.server.seminar4.user.dto.UserRequest;
 import com.pard.server.seminar4.user.dto.UserResponse;
 import com.pard.server.seminar4.user.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +18,7 @@ public class UserController {
     }
 
     @PostMapping("")
-    public void createUser(@RequestBody UserRequest.UserCreateRequest req) {
+    public void createUser(@RequestBody UserResponse.UserRequest.UserCreateRequest req) {
         userService.createUser(req);
     }
 
