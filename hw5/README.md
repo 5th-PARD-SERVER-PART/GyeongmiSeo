@@ -126,6 +126,14 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
     이 메서드는 로그인 성공 한 oauthUser를 받아 해당 user의 email로 id를 찾고, 그 id로 그 user가 작성한 post들을 DTO형식으로 받아 
     로그인 성공 시 띄워지는 postOfUser.html에 그 값과 함께 띄워진다.
 
-    일단 내가 구글로 로그인을 하면, DB엔 
-   
+    일단 내가 구글로 로그인을 하면, DB엔 이렇게 내 정보가 저장이 된다.
+    
+    <img width="500" alt="스크린샷 2025-05-10 오전 2 46 43" src="https://github.com/user-attachments/assets/43824bcb-1d0c-4bf4-b57f-afdfdf64bb8a" />
 
+    로그인 후 post를 여러개 작성해놓고,
+    <img width="500" alt="스크린샷 2025-05-10 오전 2 49 05" src="https://github.com/user-attachments/assets/02452e4e-e9b7-4333-8d2a-b5c07f6f2dd7" />
+
+    다시 로그인을 하면 내가 쓴 post들이 이렇게 뜨게 된다.
+    <img width="500" alt="스크린샷 2025-05-10 오전 2 50 15" src="https://github.com/user-attachments/assets/c3fb37a1-81c6-4d98-a356-bd2fe1ad03e5" />
+
+    사실 이게 다임
