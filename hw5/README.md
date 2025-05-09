@@ -164,7 +164,7 @@ log.info() : @Slf4j이 지원하는 Logger객체의 출력 메서드인데, 똑�
 
 그리고 전 자러가겠습니다. 20000!
 
-<img width="300" alt="스크린샷 2025-05-10 오전 3 08 22" src="https://github.com/user-attachments/assets/193f49d7-03de-4dc5-bfbe-515787d5a57a" />
+<img width="200" alt="스크린샷 2025-05-10 오전 3 08 22" src="https://github.com/user-attachments/assets/193f49d7-03de-4dc5-bfbe-515787d5a57a" />
 
 
 
