@@ -108,5 +108,24 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
 
 
 - LoginController 
-  - hw4까지와는 다르게, client에게 요청이 들어오면 바로 controller를 보지 않고, 
-  - config(설정파일, 그 중에서도 가장 중요한 SecurityConfig파일)먼저 보면, 클래스 안에 
+  - hw4까지와는 다르게, client에게 요청이 들어오면 바로 controller를 보지 않고,
+    
+  - config(설정파일, 그 중에서도 가장 중요한 SecurityConfig파일)먼저 보면, 클래스 안에 FilterChain이라는 메서드가 보인다. 이 메서드는 Spring Sequrity가 client로부터 받은 요청에 응답하기 전, 필터링을 먼저 거치는데, 이 SecurityConfig로 어떻게 필터링 할 지 정한다.
+
+      <img width="700" alt="스크린샷 2025-05-10 오전 2 32 31" src="https://github.com/user-attachments/assets/bdd58870-813f-4073-8272-47ccdd6f5c39" />
+
+    갑자기 얘 왜 들고 왔냐? 바로 이 config 파일에서 로긘 성공 시 어느 Controller의 요청으로 갈 지 정해주기 때문이다.
+
+    바로 이 코드에서
+    <img width="600" alt="스크린샷 2025-05-10 오전 2 36 31" src="https://github.com/user-attachments/assets/702f7e7a-432f-4642-a9d5-0e13bffff4f8" />
+
+    따라서 LoginController는 우리가 이전까지 구현해왔던 JSON 방식의 data구조를 주거니 받거니 하는 것과는 다르다.
+
+    사용자가 login 성공 시, (SecurityConfig 파일에서 구현된 내용에 따라) /hom으로 GetMapping된 showMyPosts가 실행되는데,
+
+    이 메서드는 로그인 성공 한 oauthUser를 받아 해당 user의 email로 id를 찾고, 그 id로 그 user가 작성한 post들을 DTO형식으로 받아 
+    로그인 성공 시 띄워지는 postOfUser.html에 그 값과 함께 띄워진다.
+
+    일단 내가 구글로 로그인을 하면, DB엔 
+   
+
