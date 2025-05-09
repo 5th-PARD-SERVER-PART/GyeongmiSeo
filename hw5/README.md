@@ -91,7 +91,7 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
 
 이번 과제는 hw4에서 로그인 기능을 추가하는 건데,
 
-이 과정에서 한 Controller 패키지 아래 두개의 Controller가 존재하고,
+이 과정에서 한 Controller 패키지 아래 두개의 Controller가 존재하고(User 도메인 안에),
 한 Service 패키지 아래 두 개의 Service 파일이 존재해버렸다. 이게 맞나 해서 알아보니, 실무에서도 이렇게 쓰인단다.
 
 그치만 두 개의 역할은 극명하다.
@@ -131,9 +131,41 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
     <img width="500" alt="스크린샷 2025-05-10 오전 2 46 43" src="https://github.com/user-attachments/assets/43824bcb-1d0c-4bf4-b57f-afdfdf64bb8a" />
 
     로그인 후 post를 여러개 작성해놓고,
+    
     <img width="500" alt="스크린샷 2025-05-10 오전 2 49 05" src="https://github.com/user-attachments/assets/02452e4e-e9b7-4333-8d2a-b5c07f6f2dd7" />
 
     다시 로그인을 하면 내가 쓴 post들이 이렇게 뜨게 된다.
+    
     <img width="500" alt="스크린샷 2025-05-10 오전 2 50 15" src="https://github.com/user-attachments/assets/c3fb37a1-81c6-4d98-a356-bd2fe1ad03e5" />
 
     사실 이게 다임
+   (다른 컨트롤러는 지금까지 우리가 했던 거)
+
+## Service
+
+service도 마찬가지로 UserService는 지금까지 우리가 해오던 방식이고, 
+
+로그인 기능이 추가되면서 새롭게 추가된 방식의 Pricipal..Service는 구글 로그인 후 받아온 유저 정보로 회원가입 or 로그인 처리하는 커스터마이징 된 써빌씨스이다.
+
+<img width="700" alt="스크린샷 2025-05-10 오전 2 58 24" src="https://github.com/user-attachments/assets/71aa5a5c-3368-446d-ba4a-f0328934aed8" />
+
+log.info() : @Slf4j이 지원하는 Logger객체의 출력 메서드인데, 똑같은 출력 메서드 println과 다른 점은, 좀 더 log 정보를 세세하게 지원해준다는 점. 어노테이션 이름이 신기하게 생겼다.
+
+걍 이 서비스 클래스 요약하자면 
+
+1. 구글 로그인 되면 user 정보 받아옴
+2. DB에 그 이메일로 가입된 user 있나 확인
+3. 없으면 새로 가입, 있으면 pass~
+
+
+
+오늘도 리드미 늦어서 죄숨다..항상 후회합니다..프로후회러입니다 저는
+
+
+그리고 전 자러가겠습니다. 20000!
+
+<img width="300" alt="스크린샷 2025-05-10 오전 3 08 22" src="https://github.com/user-attachments/assets/193f49d7-03de-4dc5-bfbe-515787d5a57a" />
+
+
+
+
