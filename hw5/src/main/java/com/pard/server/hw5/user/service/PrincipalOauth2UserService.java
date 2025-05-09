@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 @Service
-@Slf4j // log를 출력하라는 것 ?? log info 가능하게 함? 맞나
+@Slf4j // log.info 지원
 @RequiredArgsConstructor
 public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
 
