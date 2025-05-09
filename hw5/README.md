@@ -147,7 +147,7 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
 
 service도 마찬가지로 UserService는 지금까지 우리가 해오던 방식이고, 
 
-로그인 기능이 추가되면서 새롭게 추가된 방식의 Pricipal..Service는 구글 로그인 후 받아온 유저 정보로 회원가입 or 로그인 처리하는 커스터마이징 된 써빌씨스이다.
+로그인 기능이 추가되면서 새롭게 추가된 방식의 Pricipal..Service는 구글 로그인 후 받아온 유저 정보로 회원가입 or 로그인 처리하는 커스터마이징 된 썰빌씨스이다.
 
 <img width="700" alt="스크린샷 2025-05-10 오전 2 58 24" src="https://github.com/user-attachments/assets/71aa5a5c-3368-446d-ba4a-f0328934aed8" />
 
