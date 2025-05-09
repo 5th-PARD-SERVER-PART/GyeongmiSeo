@@ -66,6 +66,7 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
     Access Token이 만료되면, 사용자는 Refresh Token을 이용해 별도의 로그인 과정 없이 새로운 Access Token을 발급받을 수 있삼
 
 더 자세한 내용은 이 딱 봐도 읽기 싫게 생긴 퍼플렉시티의 답변을 참고하자.
+
 <img width="700" alt="스크린샷 2025-05-10 오전 2 17 25" src="https://github.com/user-attachments/assets/2d1e5290-9825-407d-8f59-77dd22da4a7b" />
 
 
@@ -96,7 +97,7 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
 
 그치만 두 개의 역할은 극명하다.
 
-## Controller 먼저 보자.
+## Controller
 
 <img width="700" alt="스크린샷 2025-05-10 오전 2 21 11" src="https://github.com/user-attachments/assets/58494590-4fa5-41d8-8542-8e2f051cf784" />
 
@@ -117,6 +118,7 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
     갑자기 얘 왜 들고 왔냐? 바로 이 config 파일에서 로긘 성공 시 어느 Controller의 요청으로 갈 지 정해주기 때문이다.
 
     바로 이 코드에서
+    
     <img width="600" alt="스크린샷 2025-05-10 오전 2 36 31" src="https://github.com/user-attachments/assets/702f7e7a-432f-4642-a9d5-0e13bffff4f8" />
 
     따라서 LoginController는 우리가 이전까지 구현해왔던 JSON 방식의 data구조를 주거니 받거니 하는 것과는 다르다.
