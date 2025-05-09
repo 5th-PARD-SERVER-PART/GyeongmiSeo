@@ -1,8 +1,6 @@
-# 마지막 과제
+# private final Hw hw;
 
-먼저 깃 푸쉬 이슈에 도움을 주신 나임언니에게 감사를 표하며..
-
-일단 마지막 과제인만큼 리드미도 성의껏 작성해보겠습니다
+마지막 과제인만큼 리드미도 성의껏 작성해보겠습니다
 
 숏커톤이 다가오는 만큼 이제 미리미리 시작해보겠다 다짐을 하여...무려 목요일...시작했습니다...
 
@@ -67,8 +65,9 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
 
     Access Token이 만료되면, 사용자는 Refresh Token을 이용해 별도의 로그인 과정 없이 새로운 Access Token을 발급받을 수 있삼
 
-더 자세한 내용은 이 읽기 싫은 사진을 참고하자.
-![스크린샷 2025-05-10 오전 1.56.54.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Frd%2Fsxnhkcyd7178p87cjyrhgx200000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_zlK5uC%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202025-05-10%20%EC%98%A4%EC%A0%84%201.56.54.png)
+더 자세한 내용은 이 딱 봐도 읽기 싫게 생긴 퍼플렉시티의 답변을 참고하자.
+<img width="700" alt="스크린샷 2025-05-10 오전 2 17 25" src="https://github.com/user-attachments/assets/2d1e5290-9825-407d-8f59-77dd22da4a7b" />
+
 
 ㅋㅋㅋ이런 방식도 그렇고 jwt처럼 signature 암호화도 그렇고 세상엔 참 똑똑한 사람들이 많은 것 같다
 암튼 이 정도로 하고 일단 과제 코드로 넘어가즈아~~
@@ -98,6 +97,15 @@ token 방식은 서버가 직접 인증 상태를 저장하지 않기 때문에,
 그치만 두 개의 역할은 극명하다.
 
 ## Controller 먼저 보자.
+
+<img width="700" alt="스크린샷 2025-05-10 오전 2 21 11" src="https://github.com/user-attachments/assets/58494590-4fa5-41d8-8542-8e2f051cf784" />
+
+중간 주석 2개는 중간에 html로 값이 잘 안 넘어가길래 email이랑 id는 넘어가고 있는지 확인하기 위해서 있는 거라 무시해도 된다.
+지우지 않은 이유는 git push로 귀엽지도 않은 개큰이슈가 여러번 있었어서 이제는 remote와 local 서로 변경사항이 생기는 것에 대해 병적으로 예민해져있는 상태이다.
+이번에 많이 배웠다~ 하하
+
+<img width="300" alt="스크린샷 2025-05-10 오전 2 30 20" src="https://github.com/user-attachments/assets/02a4ff2d-496d-4fcc-97ac-555202d88dc9" />
+
 
 - LoginController 
   - hw4까지와는 다르게, client에게 요청이 들어오면 바로 controller를 보지 않고, 
