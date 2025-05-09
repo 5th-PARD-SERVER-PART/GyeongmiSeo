@@ -37,7 +37,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
                                 .socialId(socialId)
                                 .role(Role.USER)
                                 .build()
-        ));
+                ));
 
         return oAuth2User;
     }
