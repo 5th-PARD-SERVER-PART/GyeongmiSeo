@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>내가 쓴 게시글</h1>
+
+    <ul>
+        {{#posts}}
+        <li><b>{{title}}</b>: {{content}}</li>
+        {{/posts}}
+
+        {{^posts}}
+        <li>작성한 게시글이 없습니다</li>
+        {{/posts}}
+    </ul>
+
+
+</body>
+</html>
