@@ -18,6 +18,9 @@ public class UserController {
 
     @PostMapping("")
     public void createUser(@RequestBody UserReqDto.UserCreateReq req){
+        // 이 body에선 post 값도 넘어오지만,
+        // service 코드에서 post값을 null 로 설정하고 DTO로 넣게 됨.
+        // null에서 post값 들어가게 바꿔보자
         userService.createUser(req);
     }
 
