@@ -24,15 +24,15 @@ public class PostService {
         User user = userRepo.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 //        User user = u.get();
-        Post post = new Post(null, req.getTitle(), req.getContent(), user);
+        Post post = new Post(null, req.getTitle(), req.getContent(), req.getLike() , user);
         postRepo.save(post);
     }
 
-//    public PostReadResDto readPost(Long postId){
-//        Post post = postRepo.findById(postId)
-//                .orElseThrow(() -> new RuntimeException("User not found"));
-//        return new PostReadResDto(postId, post.getTitle(), post.getContent());
-//    }
+    public PostReadResDto readPost(Long postId){
+        Post post = postRepo.findById(postId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return new PostReadResDto(postId, post.getTitle(), post.getContent(), post.getLike());
+    }
 
     public List<PostReadResDto> findByUserId(Long userId){
         List<Post> posts = postRepo.findAllByUserId(userId);

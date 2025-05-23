@@ -19,6 +19,9 @@ public class Post {
     private String title;
     private String content;
 
+    // 좋아요 기능 추가
+    private Long like; // 해당 Post의 좋아요 수
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

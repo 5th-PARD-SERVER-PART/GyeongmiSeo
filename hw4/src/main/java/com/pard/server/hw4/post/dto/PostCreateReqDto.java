@@ -10,5 +10,7 @@ import lombok.NoArgsConstructor;
 public class PostCreateReqDto {
     private String title;
     private String content;
+    // 좋아요 추가
+    private Long like;
 }
 

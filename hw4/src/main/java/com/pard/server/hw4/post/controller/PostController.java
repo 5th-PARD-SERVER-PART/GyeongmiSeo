@@ -1,6 +1,8 @@
 package com.pard.server.hw4.post.controller;
 
 
+import com.pard.server.hw4.like.dto.LikeRequestDto;
+import com.pard.server.hw4.like.service.LikeService;
 import com.pard.server.hw4.post.dto.PostCreateReqDto;
 import com.pard.server.hw4.post.dto.PostReadResDto;
 import com.pard.server.hw4.post.service.PostService;
@@ -12,7 +14,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/post")
 public class PostController {
-    private  final PostService postService;
+    private final PostService postService;
+    private final LikeService likeService;
     @PostMapping("")
     public void createPost(@RequestParam Long userId, @RequestBody PostCreateReqDto req){
         postService.createPost(userId, req);
@@ -32,4 +35,11 @@ public class PostController {
     public void delete(@RequestParam Long postId){
         postService.delete(postId);
     }
+
+    // like 눌렀을 때
+    @PostMapping("/{postId}/like")
+    public void likePost(@PathVariable Long postId, @RequestBody LikeRequestDto req) {
+        likeService.likePost(postId, req.getUserId());
+    }
+
 }

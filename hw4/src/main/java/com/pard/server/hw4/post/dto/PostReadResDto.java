@@ -17,11 +17,13 @@ public class PostReadResDto {
     private Long id;
     private String title;
     private String content;
+    // 좋아요
+    private Long like;
 
     public static List<PostReadResDto> postToDto(List<Post> posts){
         List<PostReadResDto> ret = new ArrayList<>();
         for(Post post : posts){
-            PostReadResDto p = new PostReadResDto(post.getId(), post.getTitle(), post.getContent());
+            PostReadResDto p = new PostReadResDto(post.getId(), post.getTitle(), post.getContent(), post.getLike());
             ret.add(p);
         }
         return ret;
