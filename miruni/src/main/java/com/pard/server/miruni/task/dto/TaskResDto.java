@@ -24,8 +24,8 @@ public class TaskResDto {
         private String q4;
         private String q5;
 
-        // 결론
-        private String result;
+        // 키워드
+        private String keyword;
 
         public static TaskResDto.ReadUser from(Task task) { // 유저 정보 들어오면 builder로 정보 감싸서 DTO 형식으로 만듬
             return ReadUser.builder()
@@ -36,7 +36,7 @@ public class TaskResDto {
                     .q3(task.getQ3())
                     .q4(task.getQ4())
                     .q5(task.getQ5())
-                    .result(task.getResult())
+                    .keyword(task.getKeyword())
                     .build();
         }
     }

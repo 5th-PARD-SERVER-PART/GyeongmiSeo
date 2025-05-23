@@ -22,6 +22,6 @@ public class TaskReqDto {
         private String q5;
 
         // 결론
-        private String result;
+        private String keyword;
     }
 }

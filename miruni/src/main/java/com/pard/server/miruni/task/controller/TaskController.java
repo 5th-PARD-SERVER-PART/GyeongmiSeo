@@ -21,15 +21,19 @@ public class TaskController {
         return taskService.findAll();
     }
 
-    @PostMapping("")
-    public String save(@RequestBody TaskReqDto.TaskCreateReq req) {
-        taskService.createUser(req);
-        return "저장완료";
+    @GetMapping("/{task_id}")
+    public List<TaskResDto.ReadUser> findByPart(@PathVariable int task_id) {
+        return taskService.findByTask_id(task_id);
     }
 
+    @PostMapping("")
+    public void save(@RequestBody TaskReqDto.TaskCreateReq req) {
+        taskService.createUser(req);
+    }
 
-
-
-
+    @DeleteMapping("")
+    public void delete(@RequestParam int task_id){
+        taskService.delete(task_id);
+    }
 
 }

@@ -27,6 +27,6 @@ public class Task {
     private String q4;
     private String q5;
 
-    // 결론
-    private String result;
+    // 키워드
+    private String keyword;
 }

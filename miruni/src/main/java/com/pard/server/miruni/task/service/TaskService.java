@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -27,7 +26,7 @@ public class TaskService {
                         .q3(task.getQ3())
                         .q4(task.getQ4())
                         .q5(task.getQ5())
-                        .result(task.getResult())
+                        .keyword(task.getKeyword())
                         .build()).toList();
         return dtos;
     }
@@ -40,9 +39,29 @@ public class TaskService {
                 .q3(req.getQ3())
                 .q4(req.getQ4())
                 .q5(req.getQ5())
-                .result(req.getResult())
+                .keyword(req.getKeyword())
                 .build();
         taskRepo.save(t);
     }
 
+    public List<TaskResDto.ReadUser> findByTask_id(int task_id){
+        List<Task> tasks  = taskRepo.findByTask_id(task_id);
+        List<TaskResDto.ReadUser> dtos = tasks.stream().map(
+                task -> TaskResDto.ReadUser.builder()
+                        .task_id(task.getTask_id())
+                        .task_name(task.getTask_name())
+                        .q1(task.getQ1())
+                        .q2(task.getQ2())
+                        .q3(task.getQ3())
+                        .q4(task.getQ4())
+                        .q5(task.getQ5())
+                        .keyword(task.getKeyword())
+                        .build()).toList();
+        return dtos;
+    }
+
+    public void delete(int task_id){
+        Task user = taskRepo.findById(task_id).orElseThrow(IllegalAccessError::new);
+        taskRepo.delete(user);
+    }
 }
