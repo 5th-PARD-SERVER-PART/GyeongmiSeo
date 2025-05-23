@@ -17,12 +17,11 @@ public class TaskResDto {
         // 과제 이름
         private String task_name;
 
-        // 질문 1~5
+        // 질문 1~4
         private String q1;
         private String q2;
         private String q3;
         private String q4;
-        private String q5;
 
         // 키워드
         private String keyword;
@@ -35,7 +34,6 @@ public class TaskResDto {
                     .q2(task.getQ2())
                     .q3(task.getQ3())
                     .q4(task.getQ4())
-                    .q5(task.getQ5())
                     .keyword(task.getKeyword())
                     .build();
         }

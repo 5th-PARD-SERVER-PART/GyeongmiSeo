@@ -25,7 +25,6 @@ public class TaskService {
                         .q2(task.getQ2())
                         .q3(task.getQ3())
                         .q4(task.getQ4())
-                        .q5(task.getQ5())
                         .keyword(task.getKeyword())
                         .build()).toList();
         return dtos;
@@ -38,7 +37,6 @@ public class TaskService {
                 .q2(req.getQ2())
                 .q3(req.getQ3())
                 .q4(req.getQ4())
-                .q5(req.getQ5())
                 .keyword(req.getKeyword())
                 .build();
         taskRepo.save(t);
@@ -54,7 +52,6 @@ public class TaskService {
                         .q2(task.getQ2())
                         .q3(task.getQ3())
                         .q4(task.getQ4())
-                        .q5(task.getQ5())
                         .keyword(task.getKeyword())
                         .build()).toList();
         return dtos;
