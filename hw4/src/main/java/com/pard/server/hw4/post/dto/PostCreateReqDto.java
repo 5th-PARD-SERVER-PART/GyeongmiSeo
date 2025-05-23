@@ -1,8 +1,12 @@
 package com.pard.server.hw4.post.dto;
 
+import com.pard.server.hw4.like.entity.Like;
+import com.pard.server.hw4.post.entity.Post;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -10,7 +14,6 @@ import lombok.NoArgsConstructor;
 public class PostCreateReqDto {
     private String title;
     private String content;
-    // 좋아요 추가
-    private Long like;
+
 }
 

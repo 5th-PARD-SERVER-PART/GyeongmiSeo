@@ -26,6 +26,12 @@ public class PostController {
         return postService.findByUserId(userId);
     }
 
+    @GetMapping("/{postId}")
+    public PostReadResDto getPost(@PathVariable Long postId) {
+        return postService.getPostDetail(postId);
+    }
+
+
     @PatchMapping("")
     public void update(@RequestParam Long postId, @RequestBody PostCreateReqDto postCreateReqDto){
         postService.update(postId, postCreateReqDto);

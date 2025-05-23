@@ -28,5 +28,13 @@ public class LikeService {
         Like like = new Like(null, user, post);
         likeRepo.save(like);
     }
+
+    public void unlikePost(Long postId, Long userId) {
+        Like like = likeRepo.findByUser_IdAndPost_Id(userId, postId)
+                .orElseThrow(() -> new IllegalStateException("좋아요 기록 없음"));
+
+        likeRepo.delete(like);
+    }
+
 }
 

@@ -19,19 +19,18 @@ public class PostService {
     private final PostRepo postRepo;
 
     public void createPost(Long userId, PostCreateReqDto req){
-//        Optional<User> u = userRepo.findById(userId);
         // 찾는 ID가 없으면 RuntimeException
         User user = userRepo.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 //        User user = u.get();
-        Post post = new Post(null, req.getTitle(), req.getContent(), req.getLike() , user);
+        Post post = new Post(user.getId(), req.getTitle(), req.getContent(), user, null);
         postRepo.save(post);
     }
 
     public PostReadResDto readPost(Long postId){
         Post post = postRepo.findById(postId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        return new PostReadResDto(postId, post.getTitle(), post.getContent(), post.getLike());
+        return new PostReadResDto(postId, post.getTitle(), post.getContent(), post.getLikes());
     }
 
     public List<PostReadResDto> findByUserId(Long userId){
@@ -46,6 +45,12 @@ public class PostService {
 
         return postReadResDtos;
     }
+
+    public PostReadResDto getPostDetail(Long postId) {
+        Post post = postRepo.findById(postId).orElseThrow();
+        return PostReadResDto.from(post);
+    }
+
 
     @Transactional
     public void update(Long postId, PostCreateReqDto req){
